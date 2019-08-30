@@ -2,13 +2,19 @@
 
 """
 名称：求签啦
-版本:1.0
+版本:1.1
 作者：邱溪言
 功能：用户输入数字，通过简单的计算求签
+     加入时间戳
 """
 
 import random
+import datetime
 import time
+
+cur = datetime.datetime.now()
+cm = cur.month
+cd = cur.day
 
 print('***********天灵灵，地灵灵，小邱算卦指定行，一天一卦，多了不灵啦~***********')
 luckynum_str = input('请在十支签中选择一支（输入数字1~10）：')
@@ -26,7 +32,7 @@ def random_list(start, stop, length):
 
 
 ran_list = random_list(0, 10, 10)
-rannum = ran_list[luckynum]
+rannum = ran_list[luckynum - 1]
 rannumtwo = ran_list[luckynum - 2]
 
 
@@ -50,7 +56,7 @@ time.sleep(1)
 
 print(compare(rannum, rannumtwo))
 
-print('*****************************今日签文*****************************')
+print('***************************{}月{}日签文***************************'.format(cm, cd))
 
 
 def pick():
