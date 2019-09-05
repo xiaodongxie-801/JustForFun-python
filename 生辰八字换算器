@@ -1,0 +1,23 @@
+"""
+名称：生辰八字换算器
+作者:邱溪言
+日期：2019.9.5
+功能：通过输入公历生日，换算出生辰八字
+"""
+
+def main():
+    """
+    主函数
+    """
+    sc_str = input('请输入您的出生时间（YYYY/MM/DD/HH）：')
+    str_list = sc_str.split('/')
+    # print(str_list)
+    birthyear = eval(str_list[0])
+    birthmonth = eval(str_list[1])
+    birthdate = eval(str_list[2])
+    birthhour = eval(str_list[3])
+    # TODO：如何将公历生日转换为农历呢？？
+
+
+if __name__ == '__main__':
+    main()
